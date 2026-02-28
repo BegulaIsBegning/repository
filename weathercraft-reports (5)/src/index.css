@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+@theme {
+  --font-minecraft: "VT323", monospace;
+  --color-mc-dirt: #8B5A2B;
+  --color-mc-grass: #5C9E38;
+  --color-mc-stone: #7D7D7D;
+  --color-mc-obsidian: #141019;
+  --color-mc-ui-bg: #C6C6C6;
+  --color-mc-ui-dark: #373737;
+  --color-mc-ui-light: #FFFFFF;
+}
+
+body {
+  font-family: var(--font-minecraft);
+  background-color: #1a1a1a;
+  background-image: 
+    linear-gradient(45deg, #222 25%, transparent 25%), 
+    linear-gradient(-45deg, #222 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #222 75%), 
+    linear-gradient(-45deg, transparent 75%, #222 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  color: white;
+}
+
+/* Minecraft Button Style */
+.mc-btn {
+  @apply relative px-4 py-2 bg-mc-ui-bg text-black font-bold uppercase text-xl border-2 border-b-4 active:border-b-2 active:translate-y-[2px];
+  border-color: #fff #555 #555 #fff;
+  image-rendering: pixelated;
+  box-shadow: inset -2px -2px 0px 0px #555, inset 2px 2px 0px 0px #fff;
+}
+
+.mc-btn:active {
+  box-shadow: inset -2px -2px 0px 0px #555, inset 2px 2px 0px 0px #888;
+}
+
+.mc-panel {
+  @apply bg-mc-ui-bg border-2 p-4 text-black;
+  border-color: #fff #555 #555 #fff;
+  box-shadow: inset -2px -2px 0px 0px #555, inset 2px 2px 0px 0px #fff;
+}
+
+.mc-input {
+  @apply bg-black text-white border-2 border-gray-500 p-2 w-full font-minecraft text-xl;
+  box-shadow: inset 2px 2px 0px 0px #000;
+}
+
+.mc-text-shadow {
+  text-shadow: 2px 2px 0px #000;
+}

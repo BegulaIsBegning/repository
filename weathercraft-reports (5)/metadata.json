@@ -1,0 +1,5 @@
+{
+  "name": "WeatherCraft Reports",
+  "description": "A Minecraft-themed weather reporting system where verified players can submit atmospheric observations.",
+  "requestFramePermissions": []
+}
